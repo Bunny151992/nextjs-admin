@@ -3,7 +3,8 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+// import { toast } from 'react-toastify';
 
 export const DynamicInput = dynamic(() => import("@nextui-org/react").then((mod) => mod.Input));
 export const DynamicButton = dynamic(() => import("@nextui-org/react").then((mod) => mod.Button));
@@ -47,7 +48,7 @@ export default function page() {
         }
 
         if (issubmit) {
-            alert('login')
+            router.push('/admin/dashboard');
         }
     }
 
